@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Niffland</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-content">
+      <span class="logo">
+        <a href="index.html">
+          <img src="/images/logo.png" alt="Logo Niffland">
+        </a>
+      </span>
+      <ul class="nav-items" >
+        <a href="#">
+          <li>Galeria</li>
+        </a>
+        <a href="#">
+          <li>Info</li>
+        </a>
+        <a href="#">
+          <li>Niffcoins</li>
+        </a>
+        <a href="#">
+          <li>Contacto</li>
+        </a>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="landing-page" >
+    <div class="section-content" >
+      <h1>NiffLand</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi at, assumenda,
+        rem expedita quod alias laudantium architecto iusto voluptates soluta modi minima ullam facilis nemo,
+        mollitia officiis? Fugit, nostrum blanditiis.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi at, assumenda,
+        rem expedita quod alias laudantium architecto iusto voluptates soluta modi minima ullam facilis nemo,
+        mollitia officiis? Fugit, nostrum blanditiis.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi at, assumenda,
+        rem expedita quodtrum blanditiis.Fugit, nostrum blanditiis.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi at, assumenda,
+        rem expedita quodtrum blanditiis.</p>
+      </div>
+
+    <div class="alert">
+      <p>Contactanos ahora y forma parte de nuestro servidor BETA!</p>
+    </div>
+  </section>
+
+<section class="gallery">
+
+  <div class="full-img" id="fullImgBox">
+    <img src="images/m1.jpeg" id="fullImg" alt="">
+    <span onclick="closeImg()">X</span>
+  </div>
+
+  <div class="TextContainer" >
+    <span class="tituloConIcono">
+      <img src="/images/handilogo.png" alt="">
+      <h2>Nuestra Galeria de Imágenes</h2>
+    </span>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing
+      elit. Vel, facilis aliquam. Numquam obcaecati
+      molestias accusantium! Maxime autem minima dolore
+      impedit, ex doloribus odio ab? Suscipit sit quos
+      maiores dicta voluptates.</p>
+  </div>
+
+  <div class="galleryContent">
+    <img src="images/m1.png" onclick="openFullImg(this.src)" alt="">
+
+    <img src="images/m2.png" onclick="openFullImg(this.src)" alt="">
+    <img src="images/m3.png" onclick="openFullImg(this.src)" alt="">
+    <img src="images/m4.png" onclick="openFullImg(this.src)" alt="">
+    <img src="images/m5.png" onclick="openFullImg(this.src)" alt="">
+    <img src="images/m6.png" onclick="openFullImg(this.src)" alt="">
+  </div>
+</section>
+
+<section class="contacto">
+
+<div class="TextContainer">
+  <span class="tituloConIcono">
+    <img src="/images/handilogo.png" alt="">
+    <h2>Contactanos</h2>
+  </span>
+</div>
+    <div class="formulario izquierda" data-sr-id="17"
+    style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 1s cubic-bezier(0.5, 0, 0, 1) 0.08s, transform 1s cubic-bezier(0.5, 0, 0, 1) 0.08s;">
+
+  <form action="https://formsubmit.co/e339f6c5ddff9a51dca6728d4e512ae5" method="POST">
+    <input type="text" name="nombre" size="20" placeholder="Nombre">
+
+
+    <input type="email" name="mail" size="20" placeholder="Email">
+
+
+    <input type="text" name="asunto" size="20" placeholder="Asunto">
+
+
+    <textarea class="mensaje" name="mensaje" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+    <input class="enviar" type="submit" value="Enviar">
+    <input type="hidden" name="_next" value="https://fabro.vidigitals.com/message-confirmation.html">
+    <input type="hidden" name="_template" value="table">
+  </form>
+
+</div>
+</section>
+
+<section class="footer">
+<div class="footerContent">
+    <a href="index.html">
+      <img src="/images/logo.png" alt="Logo Niffland">
+    </a>
+    <a href="https://instagram.com/handidact">
+      <img  src="/images/handilogo.png" alt="">
+    </a>
+    <a target="_blank" href="https://discord.gg/Pd6RqfHZWV">
+      <img  src="/images/dslogo.png" alt="">
+    </a>
+    <p>© NiffLand By Handidact 2022.</p>
+</div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
