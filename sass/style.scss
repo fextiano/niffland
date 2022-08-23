@@ -1,6 +1,7 @@
 $primary-color: #5200FF;
 $secondary-color: white;
 $bg-color: #000000;
+@use 'mixins.scss';
 
 body {
   box-sizing: border-box;
@@ -14,6 +15,14 @@ body {
 
 /* NAV BAR SETTINGS  */
 
+.navMobile{
+  display: none;
+}
+
+.pushbar{
+  display: none;
+}
+
 .navbar {
   width: 100vw;
   max-width: 100%;
@@ -21,6 +30,7 @@ body {
   max-height: 10%;
   display: flex;
   position: absolute;
+  background-color: red;
 }
 
 .navbar-content {
@@ -28,7 +38,6 @@ body {
   justify-content: space-between;
   margin: 0 auto;
   width: 80vw;
-  padding-top: 1rem;
 }
 
 .navbar-content img {
@@ -68,30 +77,30 @@ body {
 /* SECCION LANDING PAGE  */
 
 .landing-page {
-  width: 100vw;
-  max-width: 100%;
-  height: 100vh;
-  max-height: 100%;
-  background-image: url(/images/background.jpg);
-  background-size: cover;
-  background-position: left;
-  background-repeat: no-repeat;
+  @include mixins.ajustar-medida;
+  display: flex;
+  background-color: dodgerblue;
 }
 
-.section-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 55vw;
+.section-content-left {
+  @include mixins.flexbox(column);
+  width: 50vw;
   height: 100vh;
   max-height: 100%;
+  background-color: yellow;
 
   & p{
     margin-top: 0;
     width: 60%;
   }
+}
+
+.section-content-right {
+  @include mixins.flexbox(column);
+  width: 50vw;
+  height: 100vh;
+  max-height: 100%;
+  background-color: green;
 }
 
 h1 {
@@ -111,46 +120,11 @@ p {
   transition: 1s ease-in-out;
 }
 
-/* ALERTA  */
-
-.alert {
-  position: absolute;
-  top: 92%;
-  left: 63.1%;
-  width: 35vw;
-  height: 1.5rem;
-  padding: 0.6rem;
-  background-image: url(/images/alert.png);
-  background-size: cover;
-  background-position: center;
-  transition: 1s ease-in-out;
-  cursor: pointer;
-
-  & p{
-    margin: 0;
-    padding-left: 4rem;
-    width: 30vw;
-    font-weight: 600;
-    transition: 1s ease-in-out;
-  }
-}
-
-.alert:hover p{
-  font-size: 1rem;
-}
-
 /* GALLERY  */
 
 .gallery {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-image: url(/images/bg4.jpg);
-    background-position: top;
-    background-size: contain;
-    background-repeat: repeat;
+  @include mixins.ajustar-medida;
+  @include mixins.flexbox(column);
 
 
   & .TextContainer{
@@ -160,72 +134,18 @@ p {
 
 }
 
-.galleryContent {
-  width: 80%;
-  margin: 50px auto 50px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
-  gap: 40px;
-}
-
-.galleryContent img {
-  width: 100%;
-  cursor: pointer;
-  transition: 1s;
-}
-
-.galleryContent img:hover {
-  transform: scale(1.08);
-}
-
-.full-img {
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9);
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 99;
-}
-
-.full-img span {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  font-size: 30px;
-  color: #fff;
-  cursor: pointer;
-}
-
-.full-img img {
-  width: 80%;
-  max-width: 80vw;
-}
-
 // CONTACTO
 
 .contacto{
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  max-width: 100%;
-  height: 100vh;
-  max-height: 100%;
-  justify-content: center;
-  align-items: center;
-  background-image: url(/images/bg3.jpg);
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
+  @include mixins.ajustar-medida;
+  @include mixins.flexbox(column);
+  background-color: violet;
 }
 
 .formulario {
   box-sizing: content-box;
   text-align: center;
-  color: $secondary-color;
+  color: black;
   width: 70vw;
   height: 60vh;
   max-width: 40%;
@@ -260,7 +180,7 @@ form input {
   margin: 0.5rem;
   border: none;
   outline: none;
-  border-bottom: 4px solid $primary-color;
+  border-bottom: 4px solid white;
 }
 
 form input:focus {
@@ -282,7 +202,7 @@ form input:focus {
   min-height: 150px;
   resize: none;
   outline: none;
-  border-bottom: 4px solid $primary-color;
+  border-bottom: 4px solid white;
 }
 
 .mensaje:focus {
@@ -293,8 +213,8 @@ form input:focus {
 .enviar {
   width: 10vh;
   padding: 0;
-  background-color: $primary-color;
-  color: $secondary-color;
+  background-color: black;
+  color: white;
   cursor: pointer;
   transition: 0.5s ease-in-out;
 }
@@ -327,4 +247,113 @@ form input:focus {
     }
 
   }
+}
+
+// SECTION 3
+
+    .section3{
+      @include mixins.ajustar-medida;
+      background-color: pink;
+    }
+
+
+// MOBILE VERSION
+
+@media screen and (max-width: 840px){
+
+    // NAV BAR
+  .navbar{
+    display: none;
+  }
+
+  .navMobile {
+      display: flex;
+      background-color: dodgerblue;
+      width: 100vw;
+      height: 10vh;
+      position: fixed;
+      z-index: 9900;
+    }
+
+    .navMobileContent {
+      @include mixins.flexbox(row);
+      justify-content: space-around;
+      width: 90%;
+      margin: 0 auto;
+
+
+      & img{
+        width: 35vh;
+      }
+
+      & .btn-menu{
+        aspect-ratio: 1;
+        width: 6vh;
+        background: url(/images/menu.png);
+        border: none;
+        @include mixins.background-ajuste(contain, center)
+      }
+
+    }
+
+    .pushbar{
+      background-color: rgba(0, 0, 0, 0.500);
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      z-index: 9999;
+
+      & .btn-cerrar{
+        @include mixins.flexbox(row);
+        justify-content: space-around;
+        width: 90%;
+        margin: 1.1vh auto;
+
+
+        & img {
+            width: 35vh;
+            z-index: 9999;
+          }
+
+        & button{
+          aspect-ratio: 1;
+            width: 5vh;
+            background: url(/images/close.png);
+            border: none;
+            @include mixins.background-ajuste(contain, center);
+          }
+      }
+
+      & .menuMobile{
+        height:80vh;
+
+        & .nav-items{
+          width: 100vw;
+          height: 80vh;
+          @include mixins.flexbox(column);
+          justify-content: space-around;
+          padding: 0;
+
+          & a{
+            width: 70vw;
+            padding: 5vh;
+            font-size: 24px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+
+    // LANDING PAGE
+
+
+    .landing-page{
+      flex-direction: column;
+      max-height: 100vh;
+
+      & .section-content-right, .section-content-left{
+        width: 100vw;
+      }
+    }
+
 }

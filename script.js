@@ -1,15 +1,3 @@
-const fullImgBox = document.getElementById('fullImgBox'),
-fullImg = document.getElementById('fullImg');
-
-function closeImg(){
-    fullImgBox.style.display="none";
-}
-
-function openFullImg(reference){
-  fullImgBox.style.display="flex";
-  fullImg.src = reference;
-}
-
 // SCROLL LINKS
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -21,3 +9,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+// PUSHBAR
+
+var pushbar = new Pushbar({
+  blur: true,
+  overlay: true
+});
