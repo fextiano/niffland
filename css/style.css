@@ -9,14 +9,6 @@ body {
 }
 
 /* NAV BAR SETTINGS  */
-.navMobile {
-  display: none;
-}
-
-.pushbar {
-  display: none;
-}
-
 .navbar {
   width: 100vw;
   max-width: 100%;
@@ -24,7 +16,6 @@ body {
   max-height: 10%;
   display: flex;
   position: absolute;
-  background-color: red;
 }
 
 .navbar-content {
@@ -32,6 +23,7 @@ body {
   justify-content: space-between;
   margin: 0 auto;
   width: 80vw;
+  padding-top: 1rem;
 }
 
 .navbar-content img {
@@ -74,36 +66,25 @@ body {
   max-width: 100%;
   height: 100vh;
   max-height: 100%;
-  display: flex;
-  background-color: dodgerblue;
+  background-image: url(/images/bgtry.jpg);
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
 }
 
-.section-content-left {
+.section-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 50vw;
+  width: 55vw;
   height: 100vh;
   max-height: 100%;
-  background-color: yellow;
 }
-.section-content-left p {
+.section-content p {
   margin-top: 0;
   width: 60%;
-}
-
-.section-content-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 50vw;
-  height: 100vh;
-  max-height: 100%;
-  background-color: green;
 }
 
 h1 {
@@ -123,40 +104,108 @@ p {
   transition: 1s ease-in-out;
 }
 
+/* ALERTA  */
+.alert {
+  position: absolute;
+  top: 92%;
+  left: 63.1%;
+  width: 35vw;
+  height: 1.5rem;
+  padding: 0.6rem;
+  background-image: url(/images/alert.png);
+  background-size: cover;
+  background-position: center;
+  transition: 1s ease-in-out;
+}
+.alert p {
+  margin: 0;
+  padding-left: 4rem;
+  width: 30vw;
+  font-weight: 600;
+  transition: 1s ease-in-out;
+}
+
 /* GALLERY  */
 .gallery {
-  width: 100vw;
-  max-width: 100%;
-  height: 100vh;
-  max-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-image: url(/images/bg4.jpg);
+  background-position: top;
+  background-size: contain;
+  background-repeat: repeat;
 }
 .gallery .TextContainer {
   width: 60vw;
   margin: 6rem 0 4rem 0;
 }
 
+.galleryContent {
+  width: 80%;
+  margin: 50px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+  gap: 40px;
+}
+
+.galleryContent img {
+  width: 100%;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.galleryContent img:hover {
+  transform: scale(1.08);
+}
+
+.full-img {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.full-img span {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.full-img img {
+  width: 80%;
+  max-width: 80vw;
+}
+
 .contacto {
+  display: flex;
+  flex-direction: column;
   width: 100vw;
   max-width: 100%;
   height: 100vh;
   max-height: 100%;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  background-color: violet;
+  background-image: url(/images/bg3.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .formulario {
   box-sizing: content-box;
   text-align: center;
-  color: black;
+  color: white;
   width: 70vw;
   height: 60vh;
   max-width: 40%;
@@ -191,7 +240,7 @@ form input {
   margin: 0.5rem;
   border: none;
   outline: none;
-  border-bottom: 4px solid white;
+  border-bottom: 4px solid #5200FF;
 }
 
 form input:focus {
@@ -213,7 +262,7 @@ form input:focus {
   min-height: 150px;
   resize: none;
   outline: none;
-  border-bottom: 4px solid white;
+  border-bottom: 4px solid #5200FF;
 }
 
 .mensaje:focus {
@@ -224,7 +273,7 @@ form input:focus {
 .enviar {
   width: 10vh;
   padding: 0;
-  background-color: black;
+  background-color: #5200FF;
   color: white;
   cursor: pointer;
   transition: 0.5s ease-in-out;
@@ -253,7 +302,7 @@ form input:focus {
   width: 70%;
 }
 
-.section3 {
+.info {
   width: 100vw;
   max-width: 100%;
   height: 100vh;
@@ -261,96 +310,35 @@ form input:focus {
   background-color: pink;
 }
 
-@media screen and (max-width: 840px) {
+.niffcoins {
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  max-height: 100%;
+  background-color: dodgerblue;
+}
+
+@media screen and (max-width: 480px) {
   .navbar {
     display: none;
   }
   .navMobile {
+    background-color: white;
+    border-radius: 1rem;
     display: flex;
-    background-color: dodgerblue;
-    width: 100vw;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: 85%;
+    left: 5vw;
+    width: 90vw;
     height: 10vh;
-    position: fixed;
-    z-index: 9900;
-  }
-  .navMobileContent {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    justify-content: space-around;
-    width: 90%;
-    margin: 0 auto;
-  }
-  .navMobileContent img {
-    width: 35vh;
-  }
-  .navMobileContent .btn-menu {
-    aspect-ratio: 1;
-    width: 6vh;
-    background: url(/images/menu.png);
-    border: none;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  .pushbar {
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
     z-index: 9999;
   }
-  .pushbar .btn-cerrar {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    justify-content: space-around;
-    width: 90%;
-    margin: 1.1vh auto;
-  }
-  .pushbar .btn-cerrar img {
-    width: 35vh;
-    z-index: 9999;
-  }
-  .pushbar .btn-cerrar button {
-    aspect-ratio: 1;
-    width: 5vh;
-    background: url(/images/close.png);
-    border: none;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  .pushbar .menuMobile {
-    height: 80vh;
-  }
-  .pushbar .menuMobile .nav-items {
-    width: 100vw;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    justify-content: space-around;
-    padding: 0;
-  }
-  .pushbar .menuMobile .nav-items a {
-    width: 70vw;
-    padding: 5vh;
-    font-size: 24px;
-    font-weight: 400;
-  }
-  .landing-page {
-    flex-direction: column;
-    max-height: 100vh;
-  }
-  .landing-page .section-content-right, .landing-page .section-content-left {
-    width: 100vw;
+  .navMobile img {
+    width: 4rem;
+    background-color: #000000;
+    border-radius: 100%;
   }
 }
 

@@ -4,73 +4,42 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Template by fxTiano</title>
+  <title>Niffland</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/pushbar.css">
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="icon" type="image/jpg" href="images/">
 
 </head>
 <body>
   <!-- NAV BAR MOBILE  -->
-  <nav class="navMobile">
-    <div class="navMobileContent">
-      <a href="index.html">
-        <img src="images/logo.png" alt="">
-      </a>
-      <button class="btn-menu" data-pushbar-target="pushbar-menu"></button>
-    </div>
-  </nav>
-
-  <!-- MENU  -->
-  <div data-pushbar-id="pushbar-menu" class="pushbar from-top pushbar-menu" data-pushbar-direction="top">
-    <div class="btn-cerrar">
-      <a href="index.html">
-        <img src="images/logo.png" alt="">
-      </a>
-      <button data-pushbar-close></button>
-    </div>
-    <div class="menuMobile">
-      <ul class="nav-items">
-        <a href="#">
-          <li>text</li>
-        </a>
-        <a href="#">
-          <li>text</li>
-        </a>
-        <a href="#">
-          <li>text</li>
-        </a>
-        <a href="#">
-          <li>text</li>
-        </a>
-      </ul>
-    </div>
+  <div class="navMobile">
+    <a href=""><img src="/images/handilogo.png" alt=""></a>
+    <a href=""><img src="/images/handilogo.png" alt=""></a>
+    <a href=""><img src="/images/handilogo.png" alt=""></a>
+    <a href=""><img src="/images/handilogo.png" alt=""></a>
   </div>
-
 
   <!-- NAV BAR -->
   <nav class="navbar">
     <div class="navbar-content">
       <span class="logo">
         <a href="index.html">
-
+          <img src="/images/logo.png" alt="Logo Niffland">
         </a>
       </span>
       <ul class="nav-items" >
-        <a href="#">
-          <li>text</li>
+        <a href="#gallery">
+          <li>Galeria</li>
         </a>
-        <a href="#">
-          <li>text</li>
+        <a href="#info">
+          <li>Info</li>
         </a>
-        <a href="#">
-          <li>text</li>
+        <a href="#niffcoins">
+          <li>Niffcoins</li>
         </a>
-        <a href="#">
-          <li>text</li>
+        <a href="#contacto">
+          <li>Contacto</li>
         </a>
       </ul>
     </div>
@@ -78,8 +47,8 @@
 
   <!-- LANDING PAGE  -->
   <section class="landing-page" >
-    <div class="section-content-left" >
-      <h1>texto</h1>
+    <div class="section-content" >
+      <h1>NiffLand</h1>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi at, assumenda,
         rem expedita quod alias laudantium architecto iusto voluptates soluta modi minima ullam facilis nemo,
         mollitia officiis? Fugit, nostrum blanditiis.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi at, assumenda,
@@ -88,18 +57,24 @@
         rem expedita odtrum blanditiis.Fugit, nostrum blanditiis.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi at, assumenda,
         rem expedita quodtrum blanditiis.</p>
       </div>
-      <div class="section-content-right">
 
-      </div>
+    <div class="alert">
+      <p>Contactanos ahora y forma parte de nuestro servidor BETA!</p>
+    </div>
   </section>
 
   <!-- SECCION GALERIA  -->
 <section id="gallery" class="gallery">
 
+  <div class="full-img" id="fullImgBox">
+    <img src="images/m1.jpeg" id="fullImg" alt="">
+    <span onclick="closeImg()">X</span>
+  </div>
+
   <div class="TextContainer" >
     <span class="tituloConIcono">
-      <img src="" alt=""> <!--ICONO  -->
-      <h2>titulo h2</h2>
+      <img src="/images/handilogo.png" alt="">
+      <h2>Nuestra Galeria de Imágenes</h2>
     </span>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing
       elit. Vel, facilis aliquam. Numquam obcaecati
@@ -108,10 +83,24 @@
       maiores dicta voluptates.</p>
   </div>
 
+  <div class="galleryContent">
+    <img src="images/m1.png" onclick="openFullImg(this.src)" alt="">
+
+    <img src="images/m2.png" onclick="openFullImg(this.src)" alt="">
+    <img src="images/m3.png" onclick="openFullImg(this.src)" alt="">
+    <img src="images/m4.png" onclick="openFullImg(this.src)" alt="">
+    <img src="images/m5.png" onclick="openFullImg(this.src)" alt="">
+    <img src="images/m6.png" onclick="openFullImg(this.src)" alt="">
+  </div>
 </section>
 
-  <!-- SECCION 3 -->
-  <section class="section3" id="section3">
+  <!-- SECCION INFO -->
+  <section class="info" id="info">
+
+  </section>
+
+    <!-- SECCION NIFFCOINS  -->
+  <section class="niffcoins" id="niffcoins">
 
   </section>
 
@@ -120,8 +109,8 @@
 
 <div class="TextContainer">
   <span class="tituloConIcono">
-    <img src="" alt=""> <!--ICONO-->
-    <h2>Contacto</h2>
+    <img src="/images/handilogo.png" alt="">
+    <h2>Contactanos</h2>
   </span>
 </div>
     <div class="formulario izquierda" data-sr-id="17"
@@ -149,14 +138,19 @@
   <!-- FOOTER  -->
 <section class="footer">
 <div class="footerContent">
-    <a href="">
-      <img src="" alt="">
+    <a href="index.html">
+      <img src="/images/logo.png" alt="Logo Niffland">
     </a>
-    <p>© Todos Los Derechos 2022.</p>
+    <a href="https://instagram.com/handidact">
+      <img  src="/images/handilogo.png" alt="">
+    </a>
+    <a target="_blank" href="https://discord.gg/Pd6RqfHZWV">
+      <img  src="/images/dslogo.png" alt="">
+    </a>
+    <p>© NiffLand By Handidact 2022.</p>
 </div>
 </section>
 
-<script src="pushbar.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
